@@ -51,6 +51,12 @@
     #recommendations {
       background-color: #f9f9f9;
     }
+    #contact {
+      background-color: #e0f7fa;
+    }
+    #edit {
+      background-color: #fff8e1;
+    }
     .welcome {
       background: url('welcome-image.jpg') no-repeat center center/cover;
       height: 400px;
@@ -98,7 +104,12 @@
     .recommendation {
       margin-bottom: 15px;
     }
-
+    .contact-details {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.8em;
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -111,7 +122,6 @@
       from { transform: scale(0.9); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
-
     @media (max-width: 768px) {
       .welcome {
         font-size: 1.5em;
@@ -140,6 +150,8 @@
         <a href="#products">Products</a>
         <a href="#brands">Brands</a>
         <a href="#recommendations">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#edit">Edit</a>
       </nav>
     </div>
   </header>
@@ -187,6 +199,16 @@
       <h2 style="text-align:center">What Our Clients Say</h2>
       <div class="recommendation">"Excellent service and quality products!" - Customer A</div>
       <div class="recommendation">"Highly recommend to others." - Customer B</div>
+    </section>
+
+    <section id="contact">
+      <h2 style="text-align:center">Contact Us</h2>
+      <div class="contact-details">
+        <p><strong>Phone:</strong> +94 11 234 5678 / +94 77 123 4567</p>
+        <p><strong>Email:</strong> info@yourbusiness.com</p>
+        <p><strong>Location:</strong> 123 Business Road, Colombo, Sri Lanka</p>
+        <p><strong>Working Hours:</strong> Mon - Fri: 9.00AM - 6.00PM</p>
+      </div>
     </section>
   </div>
 
