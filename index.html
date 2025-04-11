@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .welcome {
+      background: url('welcome-image.jpg') no-repeat center center/cover;
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    .services, .brands {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-box, .brand-box {
+      width: 200px;
+      padding: 20px;
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .products-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .recommendations {
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .recommendation {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .welcome {
+        font-size: 1.5em;
+        height: 250px;
+        padding: 20px;
+        text-align: center;
+      }
+      .service-box, .brand-box {
+        width: 100%;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Business Name</h1>
+    <nav>
+      <a href="#welcome">Home</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#brands">Brands</a>
+      <a href="#recommendations">Reviews</a>
+    </nav>
+  </header>
+
+  <section id="welcome" class="welcome">
+    <div>Welcome to Our Website!</div>
+  </section>
+
+  <section id="services">
+    <h2 style="text-align:center">Our Services</h2>
+    <div class="services">
+      <div class="service-box">Service 1</div>
+      <div class="service-box">Service 2</div>
+      <div class="service-box">Service 3</div>
+      <div class="service-box">Service 4</div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 style="text-align:center">Our Products</h2>
+    <div class="products-gallery">
+      <div class="product">
+        <img src="product1.jpg" alt="Product 1" style="width:100%" />
+        <p>Product 1 Description</p>
+      </div>
+      <div class="product">
+        <img src="product2.jpg" alt="Product 2" style="width:100%" />
+        <p>Product 2 Description</p>
+      </div>
+      <!-- Add more product cards here -->
+    </div>
+  </section>
+
+  <section id="brands">
+    <h2 style="text-align:center">Brands We’re Connected With</h2>
+    <div class="brands">
+      <div class="brand-box">Brand 1</div>
+      <div class="brand-box">Brand 2</div>
+      <div class="brand-box">Brand 3</div>
+      <div class="brand-box">Brand 4</div>
+    </div>
+  </section>
+
+  <section id="recommendations" class="recommendations">
+    <h2 style="text-align:center">What Our Clients Say</h2>
+    <div class="recommendation">"Excellent service and quality products!" - Customer A</div>
+    <div class="recommendation">"Highly recommend to others." - Customer B</div>
+    <!-- Add more testimonials here -->
+  </section>
+
+  <footer>
+    <p>© 2025 Your Business Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
