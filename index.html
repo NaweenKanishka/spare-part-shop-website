@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Business Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
     body {
+      margin: 0;
+    }
+    .container {
       max-width: 1400px;
       margin: 0 auto;
     }
@@ -20,14 +24,32 @@
       color: white;
       padding: 20px;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
     nav a {
       color: white;
       margin: 0 10px;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f0c040;
     }
     section {
       padding: 40px 20px;
+      animation: fadeUp 1s ease-in-out;
+    }
+    #services {
+      background-color: #f7f7f7;
+    }
+    #products {
+      background-color: #ffffff;
+    }
+    #brands {
+      background-color: #eef4ff;
+    }
+    #recommendations {
+      background-color: #f9f9f9;
     }
     .welcome {
       background: url('welcome-image.jpg') no-repeat center center/cover;
@@ -38,6 +60,7 @@
       justify-content: center;
       font-size: 2em;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      animation: zoomIn 1.2s ease-out;
     }
     .services, .brands {
       display: flex;
@@ -52,6 +75,10 @@
       border: 1px solid #ccc;
       text-align: center;
       border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover, .brand-box:hover {
+      transform: translateY(-5px);
     }
     .products-gallery {
       display: grid;
@@ -63,13 +90,26 @@
       border-radius: 10px;
       padding: 10px;
       text-align: center;
+      transition: transform 0.3s ease;
     }
-    .recommendations {
-      background: #f9f9f9;
-      padding: 20px;
+    .product:hover {
+      transform: scale(1.05);
     }
     .recommendation {
       margin-bottom: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     @media (max-width: 768px) {
@@ -92,64 +132,68 @@
 </head>
 <body>
   <header>
-    <h1>Your Business Name</h1>
-    <nav>
-      <a href="#welcome">Home</a>
-      <a href="#services">Services</a>
-      <a href="#products">Products</a>
-      <a href="#brands">Brands</a>
-      <a href="#recommendations">Reviews</a>
-    </nav>
+    <div class="container">
+      <h1>Your Business Name</h1>
+      <nav>
+        <a href="#welcome">Home</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#brands">Brands</a>
+        <a href="#recommendations">Reviews</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="welcome" class="welcome">
-    <div>Welcome to Our Website!</div>
-  </section>
+  <div class="container">
+    <section id="welcome" class="welcome">
+      <div>Welcome to Our Website!</div>
+    </section>
 
-  <section id="services">
-    <h2 style="text-align:center">Our Services</h2>
-    <div class="services">
-      <div class="service-box">Service 1</div>
-      <div class="service-box">Service 2</div>
-      <div class="service-box">Service 3</div>
-      <div class="service-box">Service 4</div>
-    </div>
-  </section>
-
-  <section id="products">
-    <h2 style="text-align:center">Our Products</h2>
-    <div class="products-gallery">
-      <div class="product">
-        <img src="product1.jpg" alt="Product 1" style="width:100%" />
-        <p>Product 1 Description</p>
+    <section id="services">
+      <h2 style="text-align:center">Our Services</h2>
+      <div class="services">
+        <div class="service-box">Service 1</div>
+        <div class="service-box">Service 2</div>
+        <div class="service-box">Service 3</div>
+        <div class="service-box">Service 4</div>
       </div>
-      <div class="product">
-        <img src="product2.jpg" alt="Product 2" style="width:100%" />
-        <p>Product 2 Description</p>
+    </section>
+
+    <section id="products">
+      <h2 style="text-align:center">Our Products</h2>
+      <div class="products-gallery">
+        <div class="product">
+          <img src="product1.jpg" alt="Product 1" style="width:100%" />
+          <p>Product 1 Description</p>
+        </div>
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2" style="width:100%" />
+          <p>Product 2 Description</p>
+        </div>
       </div>
-      <!-- Add more product cards here -->
-    </div>
-  </section>
+    </section>
 
-  <section id="brands">
-    <h2 style="text-align:center">Brands We’re Connected With</h2>
-    <div class="brands">
-      <div class="brand-box">Brand 1</div>
-      <div class="brand-box">Brand 2</div>
-      <div class="brand-box">Brand 3</div>
-      <div class="brand-box">Brand 4</div>
-    </div>
-  </section>
+    <section id="brands">
+      <h2 style="text-align:center">Brands We’re Connected With</h2>
+      <div class="brands">
+        <div class="brand-box">Brand 1</div>
+        <div class="brand-box">Brand 2</div>
+        <div class="brand-box">Brand 3</div>
+        <div class="brand-box">Brand 4</div>
+      </div>
+    </section>
 
-  <section id="recommendations" class="recommendations">
-    <h2 style="text-align:center">What Our Clients Say</h2>
-    <div class="recommendation">"Excellent service and quality products!" - Customer A</div>
-    <div class="recommendation">"Highly recommend to others." - Customer B</div>
-    <!-- Add more testimonials here -->
-  </section>
+    <section id="recommendations">
+      <h2 style="text-align:center">What Our Clients Say</h2>
+      <div class="recommendation">"Excellent service and quality products!" - Customer A</div>
+      <div class="recommendation">"Highly recommend to others." - Customer B</div>
+    </section>
+  </div>
 
   <footer>
-    <p>© 2025 Your Business Name. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Your Business Name. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
