@@ -42,6 +42,28 @@
     #services {
       background-color: #f7f7f7;
     }
+    .service-box img{
+        height: 50px;
+        width: 50px;
+    }
+    .brand-box img{
+        height: 50px;
+        width: 50px;
+    }
+    .brand-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.2em;
+    }
+    .service-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.2em;
+    }
     #products {
       background-color: #ffffff;
     }
@@ -122,6 +144,18 @@
       from { transform: scale(0.9); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+
+    /* Enhanced responsive design */
+    @media (max-width: 1024px) {
+      .welcome {
+        font-size: 1.8em;
+        height: 350px;
+      }
+      .service-box, .brand-box {
+        width: 45%;
+      }
+    }
+
     @media (max-width: 768px) {
       .welcome {
         font-size: 1.5em;
@@ -129,13 +163,40 @@
         padding: 20px;
         text-align: center;
       }
-      .service-box, .brand-box {
-        width: 100%;
-      }
       nav {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        align-items: center;
+      }
+      .service-box, .brand-box {
+        width: 100%;
+      }
+      .services, .brands {
+        gap: 10px;
+      }
+      .products-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .product {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .welcome {
+        font-size: 1.2em;
+        height: 200px;
+      }
+      nav a {
+        font-size: 1em;
+        margin: 5px 0;
+      }
+      .service-box, .brand-box {
+        width: 100%;
+      }
+      .products-gallery {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -163,10 +224,10 @@
     <section id="services">
       <h2 style="text-align:center">Our Services</h2>
       <div class="services">
-        <div class="service-box">Service 1</div>
-        <div class="service-box">Service 2</div>
-        <div class="service-box">Service 3</div>
-        <div class="service-box">Service 4</div>
+        <div class="service-box"><img src="My first  logo-01.png" alt="">Service 1</div>
+        <div class="service-box"><img src="My first  logo-01.png" alt="">Service 2</div>
+        <div class="service-box"><img src="My first  logo-01.png" alt="">Service 3</div>
+        <div class="service-box"><img src="My first  logo-01.png" alt="">Service 4</div>
       </div>
     </section>
 
@@ -174,11 +235,23 @@
       <h2 style="text-align:center">Our Products</h2>
       <div class="products-gallery">
         <div class="product">
-          <img src="product1.jpg" alt="Product 1" style="width:100%" />
+          <img src="My first  logo-01.png" alt="Product 1" style="width:100%" />
           <p>Product 1 Description</p>
         </div>
         <div class="product">
-          <img src="product2.jpg" alt="Product 2" style="width:100%" />
+          <img src="My first  logo-01.png" alt="Product 2" style="width:100%" />
+          <p>Product 2 Description</p>
+        </div>
+        <div class="product">
+          <img src="My first  logo-01.png" alt="Product 2" style="width:100%" />
+          <p>Product 2 Description</p>
+        </div>
+        <div class="product">
+          <img src="My first  logo-01.png" alt="Product 2" style="width:100%" />
+          <p>Product 2 Description</p>
+        </div>
+        <div class="product">
+          <img src="My first  logo-01.png" alt="Product 2" style="width:100%" />
           <p>Product 2 Description</p>
         </div>
       </div>
@@ -187,10 +260,10 @@
     <section id="brands">
       <h2 style="text-align:center">Brands We’re Connected With</h2>
       <div class="brands">
-        <div class="brand-box">Brand 1</div>
-        <div class="brand-box">Brand 2</div>
-        <div class="brand-box">Brand 3</div>
-        <div class="brand-box">Brand 4</div>
+        <div class="brand-box"><img src="My first  logo-01.png" alt="">Brand 1</div>
+        <div class="brand-box"><img src="My first  logo-01.png" alt="">Brand 2</div>
+        <div class="brand-box"><img src="My first  logo-01.png" alt="">Brand 3</div>
+        <div class="brand-box"><img src="My first  logo-01.png" alt="">Brand 4</div>
       </div>
     </section>
 
